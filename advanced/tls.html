@@ -1,0 +1,1046 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TLS · V2Ray 配置指南|V2Ray 白话文教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="websocket.html" />
+    
+    
+    <link rel="prev" href="httpfake.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/ToutyRater" target="_blank" class="custom-link">My GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prep/">
+            
+                <a href="../prep/">
+            
+                    
+                    开篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../prep/start.html">
+            
+                <a href="../prep/start.html">
+            
+                    
+                    开始之前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../prep/install.html">
+            
+                <a href="../prep/install.html">
+            
+                    
+                    安装 V2Ray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../prep/json.html">
+            
+                <a href="../prep/json.html">
+            
+                    
+                    配置格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    基本篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic/vmess.html">
+            
+                <a href="../basic/vmess.html">
+            
+                    
+                    VMess 协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic/Shadowsocks.html">
+            
+                <a href="../basic/Shadowsocks.html">
+            
+                    
+                    Shadowsocks 协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic/log.html">
+            
+                <a href="../basic/log.html">
+            
+                    
+                    日志文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic/routing/">
+            
+                <a href="../basic/routing/">
+            
+                    
+                    路由功能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../basic/routing/cndirect.html">
+            
+                <a href="../basic/routing/cndirect.html">
+            
+                    
+                    国内直连
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../basic/routing/adblock.html">
+            
+                <a href="../basic/routing/adblock.html">
+            
+                    
+                    广告过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../basic/routing/notice.html">
+            
+                <a href="../basic/routing/notice.html">
+            
+                    
+                    注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic/sumup.html">
+            
+                <a href="../basic/sumup.html">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    高级篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="mux.html">
+            
+                <a href="mux.html">
+            
+                    
+                    Mux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="mkcp.html">
+            
+                <a href="mkcp.html">
+            
+                    
+                    mKCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="dynamicport.html">
+            
+                <a href="dynamicport.html">
+            
+                    
+                    动态端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="outboundproxy.html">
+            
+                <a href="outboundproxy.html">
+            
+                    
+                    代理转发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="vps_relay.html">
+            
+                <a href="vps_relay.html">
+            
+                    
+                    国内中转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="httpfake.html">
+            
+                <a href="httpfake.html">
+            
+                    
+                    HTTP 伪装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.7" data-path="tls.html">
+            
+                <a href="tls.html">
+            
+                    
+                    TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="websocket.html">
+            
+                <a href="websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="wss_and_web.html">
+            
+                <a href="wss_and_web.html">
+            
+                    
+                    WebSocket+TLS+Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="h2.html">
+            
+                <a href="h2.html">
+            
+                    
+                    HTTP/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="cdn.html">
+            
+                <a href="cdn.html">
+            
+                    
+                    CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="not_recommend.html">
+            
+                <a href="not_recommend.html">
+            
+                    
+                    不建议的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../app/">
+            
+                <a href="../app/">
+            
+                    
+                    应用篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../app/transparent_proxy.html">
+            
+                <a href="../app/transparent_proxy.html">
+            
+                    
+                    透明代理(REDIRECT)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../app/tproxy.html">
+            
+                <a href="../app/tproxy.html">
+            
+                    
+                    透明代理(TPROXY)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../app/reverse.html">
+            
+                <a href="../app/reverse.html">
+            
+                    
+                    反向代理/内网穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../app/reverse2.html">
+            
+                <a href="../app/reverse2.html">
+            
+                    
+                    反向代理/内网穿透2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../app/dns.html">
+            
+                <a href="../app/dns.html">
+            
+                    
+                    内置 DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../app/balance.html">
+            
+                <a href="../app/balance.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../app/netflix.html">
+            
+                <a href="../app/netflix.html">
+            
+                    
+                    利用 V2Ray 看 Netflix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../app/docker-deploy-v2ray.html">
+            
+                <a href="../app/docker-deploy-v2ray.html">
+            
+                    
+                    Docker 部署 V2Ray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../app/benchmark.html">
+            
+                <a href="../app/benchmark.html">
+            
+                    
+                    不权威性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../app/optimization.html">
+            
+                <a href="../app/optimization.html">
+            
+                    
+                    内存优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../routing/">
+            
+                <a href="../routing/">
+            
+                    
+                    路由篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../routing/sitedata.html">
+            
+                <a href="../routing/sitedata.html">
+            
+                    
+                    域名文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../routing/configurate_rules.html">
+            
+                <a href="../routing/configurate_rules.html">
+            
+                    
+                    路由规则设定方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../routing/bittorrent.html">
+            
+                <a href="../routing/bittorrent.html">
+            
+                    
+                    禁止 BT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../routing/balance2.html">
+            
+                <a href="../routing/balance2.html">
+            
+                    
+                    负载均衡 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >TLS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#tls"><b>1. </b>TLS</a></li><ul><li><span class="title-icon "></span><a href="#&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><b>1.1. </b>&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x57DF;&#x540D;</a></li><li><span class="title-icon "></span><a href="#&#x8BC1;&#x4E66;&#x751F;&#x6210;"><b>1.2. </b>&#x8BC1;&#x4E66;&#x751F;&#x6210;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;-acmesh"><b>1.2.1. </b>&#x5B89;&#x88C5; acme.sh</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-acmesh-&#x751F;&#x6210;&#x8BC1;&#x4E66;"><b>1.2.2. </b>&#x4F7F;&#x7528; acme.sh &#x751F;&#x6210;&#x8BC1;&#x4E66;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x548C;&#x5BC6;&#x94A5;"><b>1.2.3. </b>&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x548C;&#x5BC6;&#x94A5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;-v2ray"><b>1.3. </b>&#x914D;&#x7F6E; V2Ray</a></li><ul><li><span class="title-icon "></span><a href="#&#x670D;&#x52A1;&#x5668;"><b>1.3.1. </b>&#x670D;&#x52A1;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x5BA2;&#x6237;&#x7AEF;"><b>1.3.2. </b>&#x5BA2;&#x6237;&#x7AEF;</a></li></ul><li><span class="title-icon "></span><a href="#&#x9A8C;&#x8BC1;"><b>1.4. </b>&#x9A8C;&#x8BC1;</a></li><li><span class="title-icon "></span><a href="#&#x6E29;&#x99A8;&#x63D0;&#x9192;"><b>1.5. </b>&#x6E29;&#x99A8;&#x63D0;&#x9192;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x65B0;&#x5386;&#x53F2;"><b>1.6. </b>&#x66F4;&#x65B0;&#x5386;&#x53F2;</a></li></ul></ul></div><a href="#tls" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="tls"><a name="tls" class="anchor-navigation-ex-anchor" href="#tls"><i class="fa fa-link" aria-hidden="true"></i></a>1. TLS</h1>
+<p>&#x4ECE; v1.19 &#x8D77;&#x5F15;&#x5165;&#x4E86; TLS&#xFF0C;TLS &#x4E2D;&#x6587;&#x8BD1;&#x540D;&#x662F;&#x4F20;&#x8F93;&#x5C42;&#x5B89;&#x5168;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x542C;&#x8BF4;&#x8FC7;&#xFF0C;&#x8BF7; Google &#x4E86;&#x89E3;&#x4E00;&#x4E0B;&#x3002;&#x4EE5;&#x4E0B;&#x7ED9;&#x51FA;&#x4E9B;&#x6211;&#x8BA4;&#x4E3A;&#x4ECB;&#x7ECD;&#x8F83;&#x597D;&#x7684;&#x6587;&#x7AE0;&#x94FE;&#x63A5;&#xFF1A;</p>
+<p> <a href="http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html" target="_blank">SSL/TLS&#x534F;&#x8BAE;&#x8FD0;&#x884C;&#x673A;&#x5236;&#x7684;&#x6982;&#x8FF0;</a></p>
+<p> <a href="https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E5%8D%94%E8%AD%B0" target="_blank">&#x4F20;&#x8F93;&#x5C42;&#x5B89;&#x5168;&#x534F;&#x8BAE;</a></p>
+<h2 id="&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><a name="&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x57DF;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x57DF;&#x540D;</h2>
+<p>&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x6CE8;&#x518C;&#x6709;&#x57DF;&#x540D;&#x4E86;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x3002;
+TLS &#x9700;&#x8981;&#x4E00;&#x4E2A;&#x57DF;&#x540D;&#xFF0C;&#x57DF;&#x540D;&#x6709;&#x514D;&#x8D39;&#x7684;&#x548C;&#x6709;&#x4ED8;&#x8D39;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x820D;&#x5F97;&#x4E3A;&#x4E00;&#x4E2A;&#x57DF;&#x540D;&#x6BCF;&#x5E74;&#x82B1;&#x70B9;&#x94B1;&#xFF0C;&#x7528;&#x4E2A;&#x514D;&#x8D39;&#x57DF;&#x540D;&#x4E5F;&#x53EF;&#x4EE5;&#xFF0C;&#x4F46;&#x603B;&#x4F53;&#x6765;&#x8BF4;&#x4ED8;&#x8D39;&#x7684;&#x4F1A;&#x4F18;&#x4E8E;&#x514D;&#x8D39;&#x7684;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x5728;&#x672C;&#x6587;&#x4E2D;&#x6211;&#x5C31;&#x5FFD;&#x7565;&#x5982;&#x4F55;&#x6CE8;&#x518C;&#x8D2D;&#x4E70;&#x57DF;&#x540D;&#x4E86;&#x3002;&#x5173;&#x4E8E;&#x5982;&#x4F55;&#x83B7;&#x53D6;&#x57DF;&#x540D;&#xFF0C;&#x5177;&#x4F53;&#x641C;&#x7D22;&#x76F8;&#x5173;&#x6587;&#x7AE0;&#x6559;&#x7A0B;&#x3002;</p>
+<p><strong>&#x6CE8;&#x518C;&#x597D;&#x57DF;&#x540D;&#x4E4B;&#x540E;&#x52A1;&#x5FC5;&#x8BB0;&#x5F97;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; A &#x8BB0;&#x5F55;&#x6307;&#x5411;&#x4F60;&#x7684; VPS!</strong></p>
+<p><strong>&#x4EE5;&#x4E0B;&#x5047;&#x8BBE;&#x6CE8;&#x518C;&#x7684;&#x57DF;&#x540D;&#x4E3A; mydomain.me&#xFF0C;&#x8BF7;&#x5C06;&#x4E4B;&#x66FF;&#x6362;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x57DF;&#x540D;&#x3002;</strong></p>
+<h2 id="&#x8BC1;&#x4E66;&#x751F;&#x6210;"><a name="&#x8BC1;&#x4E66;&#x751F;&#x6210;" class="anchor-navigation-ex-anchor" href="#&#x8BC1;&#x4E66;&#x751F;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x8BC1;&#x4E66;&#x751F;&#x6210;</h2>
+<p>TLS &#x662F;&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;&#x673A;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528; TLS &#x9700;&#x8981;&#x8BC1;&#x4E66;&#xFF0C;&#x8BC1;&#x4E66;&#x4E5F;&#x6709;&#x514D;&#x8D39;&#x4ED8;&#x8D39;&#x7684;&#xFF0C;&#x540C;&#x6837;&#x7684;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x514D;&#x8D39;&#x8BC1;&#x4E66;&#xFF0C;&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;&#x673A;&#x6784;&#x4E3A; <a href="https://letsencrypt.org/" target="_blank">Let&apos;s Encrypt</a>&#x3002;
+&#x8BC1;&#x4E66;&#x7684;&#x751F;&#x6210;&#x6709;&#x8BB8;&#x591A;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;&#x4F7F;&#x7528; <a href="https://github.com/Neilpang/acme.sh" target="_blank">acme.sh</a> &#x811A;&#x672C;&#x751F;&#x6210;&#xFF0C;&#x672C;&#x90E8;&#x5206;&#x8BF4;&#x660E;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x53C2;&#x8003;&#x4E8E;<a href="https://github.com/Neilpang/acme.sh/blob/master/README.md" target="_blank">acme.sh README</a>&#x3002;</p>
+<p>&#x8BC1;&#x4E66;&#x6709;&#x4E24;&#x79CD;&#xFF0C;&#x4E00;&#x79CD;&#x662F; ECC &#x8BC1;&#x4E66;&#xFF08;&#x5185;&#x7F6E;&#x516C;&#x94A5;&#x662F; ECDSA &#x516C;&#x94A5;&#xFF09;&#xFF0C;&#x4E00;&#x79CD;&#x662F; RSA &#x8BC1;&#x4E66;&#xFF08;&#x5185;&#x7F6E; RSA &#x516C;&#x94A5;&#xFF09;&#x3002;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x540C;&#x7B49;&#x957F;&#x5EA6; ECC &#x6BD4; RSA &#x66F4;&#x5B89;&#x5168;,&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;&#x5177;&#x6709;&#x540C;&#x6837;&#x5B89;&#x5168;&#x6027;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;ECC &#x7684;&#x5BC6;&#x94A5;&#x957F;&#x5EA6;&#x6BD4; RSA &#x77ED;&#x5F97;&#x591A;&#xFF08;&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;&#x4F1A;&#x66F4;&#x5FEB;&#xFF09;&#x3002;&#x4F46;&#x95EE;&#x9898;&#x662F; ECC &#x7684;&#x517C;&#x5BB9;&#x6027;&#x4F1A;&#x5DEE;&#x4E00;&#x4E9B;&#xFF0C;Android 4.x &#x4EE5;&#x4E0B;&#x548C; Windows XP &#x4E0D;&#x652F;&#x6301;&#x3002;&#x53EA;&#x8981;&#x60A8;&#x7684;&#x8BBE;&#x5907;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x8001;&#x7684;&#x8001;&#x53E4;&#x8463;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; ECC &#x8BC1;&#x4E66;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x5C06;&#x7ED9;&#x51FA;&#x8FD9;&#x4E24;&#x7C7B;&#x8BC1;&#x4E66;&#x7684;&#x751F;&#x6210;&#x65B9;&#x6CD5;&#xFF0C;&#x8BF7;&#x5927;&#x5BB6;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x7684;&#x60C5;&#x51B5;&#x81EA;&#x884C;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x4E00;&#x79CD;&#x8BC1;&#x4E66;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x8BC1;&#x4E66;&#x751F;&#x6210;&#x53EA;&#x9700;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;-acmesh"><a name="&#x5B89;&#x88C5;-acmesh" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;-acmesh"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x5B89;&#x88C5; acme.sh</h3>
+<p>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;acme.sh &#x4F1A;&#x5B89;&#x88C5;&#x5230; ~/.acme.sh &#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<pre class="language-"><code>$ curl  https://get.acme.sh | sh
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                               Dload  Upload   Total   Spent    Left  Speed
+100   671  100   671    0     0    680      0 --:--:-- --:--:-- --:--:--   679
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                               Dload  Upload   Total   Spent    Left  Speed
+100  112k  100  112k    0     0   690k      0 --:--:-- --:--:-- --:--:--  693k
+[Fri 30 Dec 01:03:32 GMT 2016] Installing from online archive.
+[Fri 30 Dec 01:03:32 GMT 2016] Downloading https://github.com/Neilpang/acme.sh/archive/master.tar.gz
+[Fri 30 Dec 01:03:33 GMT 2016] Extracting master.tar.gz
+[Fri 30 Dec 01:03:33 GMT 2016] Installing to /home/user/.acme.sh
+[Fri 30 Dec 01:03:33 GMT 2016] Installed to /home/user/.acme.sh/acme.sh
+[Fri 30 Dec 01:03:33 GMT 2016] Installing alias to &apos;/home/user/.profile&apos;
+[Fri 30 Dec 01:03:33 GMT 2016] OK, Close and reopen your terminal to start using acme.sh
+[Fri 30 Dec 01:03:33 GMT 2016] Installing cron job
+no crontab for user
+no crontab for user
+[Fri 30 Dec 01:03:33 GMT 2016] Good, bash is found, so change the shebang to use bash as preferred.
+[Fri 30 Dec 01:03:33 GMT 2016] OK
+[Fri 30 Dec 01:03:33 GMT 2016] Install success!
+</code></pre><p>&#x5B89;&#x88C5;&#x6210;&#x529F;&#x540E;&#x6267;&#x884C; <code>source ~/.bashrc</code> &#x4EE5;&#x786E;&#x4FDD;&#x811A;&#x672C;&#x6240;&#x8BBE;&#x7F6E;&#x7684;&#x547D;&#x4EE4;&#x522B;&#x540D;&#x751F;&#x6548;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5B89;&#x88C5;&#x62A5;&#x9519;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x80FD;&#x662F;&#x56E0;&#x4E3A;&#x7CFB;&#x7EDF;&#x7F3A;&#x5C11; acme.sh &#x6240;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;acme.sh &#x7684;&#x4F9D;&#x8D56;&#x9879;&#x4E3B;&#x8981;&#x662F; netcat(nc)&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5;&#x8FD9;&#x4E9B;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#x4E00;&#x904D; acme.sh:</p>
+<pre class="language-"><code>$ sudo apt-get -y install netcat
+</code></pre><h3 id="&#x4F7F;&#x7528;-acmesh-&#x751F;&#x6210;&#x8BC1;&#x4E66;"><a name="&#x4F7F;&#x7528;-acmesh-&#x751F;&#x6210;&#x8BC1;&#x4E66;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-acmesh-&#x751F;&#x6210;&#x8BC1;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. &#x4F7F;&#x7528; acme.sh &#x751F;&#x6210;&#x8BC1;&#x4E66;</h3>
+<h4 id="&#x8BC1;&#x4E66;&#x751F;&#x6210;_1"><a name="&#x8BC1;&#x4E66;&#x751F;&#x6210;_1" class="anchor-navigation-ex-anchor" href="#&#x8BC1;&#x4E66;&#x751F;&#x6210;_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BC1;&#x4E66;&#x751F;&#x6210;" class="plugin-anchor" href="#&#x8BC1;&#x4E66;&#x751F;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BC1;&#x4E66;&#x751F;&#x6210;</h4>
+<p>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x751F;&#x6210;&#x8BC1;&#x4E66;&#xFF1A;</p>
+<p>&#x4EE5;&#x4E0B;&#x7684;&#x547D;&#x4EE4;&#x4F1A;&#x4E34;&#x65F6;&#x76D1;&#x542C; 80 &#x7AEF;&#x53E3;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x6267;&#x884C;&#x8BE5;&#x547D;&#x4EE4;&#x524D; 80 &#x7AEF;&#x53E3;&#x6CA1;&#x6709;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code>$ sudo ~/.acme.sh/acme.sh --issue -d mydomain.me --standalone -k ec-256
+[Fri Dec 30 08:59:12 HKT 2016] Standalone mode.
+[Fri Dec 30 08:59:12 HKT 2016] Single domain=&apos;mydomain.me&apos;
+[Fri Dec 30 08:59:12 HKT 2016] Getting domain auth token for each domain
+[Fri Dec 30 08:59:12 HKT 2016] Getting webroot for domain=&apos;mydomain.me&apos;
+[Fri Dec 30 08:59:12 HKT 2016] _w=&apos;no&apos;
+[Fri Dec 30 08:59:12 HKT 2016] Getting new-authz for domain=&apos;mydomain.me&apos;
+[Fri Dec 30 08:59:14 HKT 2016] The new-authz request is ok.
+[Fri Dec 30 08:59:14 HKT 2016] mydomain.me is already verified, skip.
+[Fri Dec 30 08:59:14 HKT 2016] mydomain.me is already verified, skip http-01.
+[Fri Dec 30 08:59:14 HKT 2016] mydomain.me is already verified, skip http-01.
+[Fri Dec 30 08:59:14 HKT 2016] Verify finished, start to sign.
+[Fri Dec 30 08:59:16 HKT 2016] Cert success.
+-----BEGIN CERTIFICATE-----
+MIIEMTCCAxmgAwIBAgISA1+gJF5zwUDjNX/6Xzz5fo3lMA0GCSqGSIb3DQEBCwUA
+MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
+ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0xNjEyMjkyMzU5MDBaFw0x
+NzAzMjkyMzU5MDBaMBcxFTATBgNVBAMTDHdlYWtzYW5kLmNvbTBZMBMGByqGSM49
+****************************************************************
+4p40tm0aMB837XQ9jeAXvXulhVH/7/wWZ8/vkUUvuHSCYHagENiq/3DYj4a85Iw9
++6u1r7atYHJ2VwqSamiyTGDQuhc5wdXIQxY/YQQqkAmn5tLsTZnnOavc4plANT40
+zweiG8vcIvMVnnkM0TSz8G1yzv1nOkruN3ozQkLMu6YS7lk/ENBN7DBtYVSmJeU2
+VAXE+zgRaP7JFOqK6DrOwhyE2LSgae83Wq/XgXxjfIo1Zmn2UmlE0sbdNKBasnf9
+gPUI45eltrjcv8FCSTOUcT7PWCa3
+-----END CERTIFICATE-----
+[Fri Dec 30 08:59:16 HKT 2016] Your cert is in  /root/.acme.sh/mydomain.me_ecc/mydomain.me.cer
+[Fri Dec 30 08:59:16 HKT 2016] Your cert key is in  /root/.acme.sh/mydomain.me_ecc/mydomain.me.key
+[Fri Dec 30 08:59:16 HKT 2016] The intermediate CA cert is in  /root/.acme.sh/mydomain.me_ecc/ca.cer
+[Fri Dec 30 08:59:16 HKT 2016] And the full chain certs is there:  /root/.acme.sh/mydomain.me_ecc/fullchain.cer
+</code></pre><p><code>-k</code> &#x8868;&#x793A;&#x5BC6;&#x94A5;&#x957F;&#x5EA6;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F; <code>ec-256</code> &#x3001;<code>ec-384</code>&#x3001;<code>2048</code>&#x3001;<code>3072</code>&#x3001;<code>4096</code>&#x3001;<code>8192</code>&#xFF0C;&#x5E26;&#x6709; <code>ec</code> &#x8868;&#x793A;&#x751F;&#x6210;&#x7684;&#x662F; ECC &#x8BC1;&#x4E66;&#xFF0C;&#x6CA1;&#x6709;&#x5219;&#x662F; RSA &#x8BC1;&#x4E66;&#x3002;&#x5728;&#x5B89;&#x5168;&#x6027;&#x4E0A; 256 &#x4F4D;&#x7684; ECC &#x8BC1;&#x4E66;&#x7B49;&#x540C;&#x4E8E; 3072 &#x4F4D;&#x7684; RSA &#x8BC1;&#x4E66;&#x3002;</p>
+<h4 id="&#x8BC1;&#x4E66;&#x66F4;&#x65B0;"><a name="&#x8BC1;&#x4E66;&#x66F4;&#x65B0;" class="anchor-navigation-ex-anchor" href="#&#x8BC1;&#x4E66;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BC1;&#x4E66;&#x66F4;&#x65B0;" class="plugin-anchor" href="#&#x8BC1;&#x4E66;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BC1;&#x4E66;&#x66F4;&#x65B0;</h4>
+<p>&#x7531;&#x4E8E; Let&apos;s Encrypt &#x7684;&#x8BC1;&#x4E66;&#x6709;&#x6548;&#x671F;&#x53EA;&#x6709; 3 &#x4E2A;&#x6708;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981; 90 &#x5929;&#x81F3;&#x5C11;&#x8981;&#x66F4;&#x65B0;&#x4E00;&#x6B21;&#x8BC1;&#x4E66;&#xFF0C;acme.sh &#x811A;&#x672C;&#x4F1A;&#x6BCF; 60 &#x5929;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x8BC1;&#x4E66;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x66F4;&#x65B0;&#x3002;</p>
+<p>&#x624B;&#x52A8;&#x66F4;&#x65B0; ECC &#x8BC1;&#x4E66;&#xFF0C;&#x6267;&#x884C;&#xFF1A;</p>
+<pre class="language-"><code>$ sudo ~/.acme.sh/acme.sh --renew -d mydomain.com --force --ecc
+</code></pre><p>&#x5982;&#x679C;&#x662F; RSA &#x8BC1;&#x4E66;&#x5219;&#x6267;&#x884C;&#xFF1A;</p>
+<pre class="language-"><code>$ sudo ~/.acme.sh/acme.sh --renew -d mydomain.com --force
+</code></pre><p><strong>&#x7531;&#x4E8E;&#x672C;&#x4F8B;&#x4E2D;&#x5C06;&#x8BC1;&#x4E66;&#x751F;&#x6210;&#x5230; <code>/etc/v2ray/</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x66F4;&#x65B0;&#x8BC1;&#x4E66;&#x4E4B;&#x540E;&#x8FD8;&#x5F97;&#x628A;&#x65B0;&#x8BC1;&#x4E66;&#x751F;&#x6210;&#x5230; /etc/v2ray&#x3002;</strong></p>
+<h3 id="&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x548C;&#x5BC6;&#x94A5;"><a name="&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x548C;&#x5BC6;&#x94A5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x548C;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. &#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x548C;&#x5BC6;&#x94A5;</h3>
+<h4 id="ecc-&#x8BC1;&#x4E66;"><a name="ecc-&#x8BC1;&#x4E66;" class="anchor-navigation-ex-anchor" href="#ecc-&#x8BC1;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ecc-&#x8BC1;&#x4E66;" class="plugin-anchor" href="#ecc-&#x8BC1;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a>ECC &#x8BC1;&#x4E66;</h4>
+<p>&#x5C06;&#x8BC1;&#x4E66;&#x548C;&#x5BC6;&#x94A5;&#x5B89;&#x88C5;&#x5230; /etc/v2ray &#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code>$ sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
+</code></pre><h4 id="rsa-&#x8BC1;&#x4E66;"><a name="rsa-&#x8BC1;&#x4E66;" class="anchor-navigation-ex-anchor" href="#rsa-&#x8BC1;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="rsa-&#x8BC1;&#x4E66;" class="plugin-anchor" href="#rsa-&#x8BC1;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a>RSA &#x8BC1;&#x4E66;</h4>
+<pre class="language-"><code>$ sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key
+</code></pre><p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x65E0;&#x8BBA;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#xFF0C;&#x5BC6;&#x94A5;(&#x5373;&#x4E0A;&#x9762;&#x7684;v2ray.key)&#x90FD;&#x4E0D;&#x80FD;&#x6CC4;&#x6F0F;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x5E78;&#x6CC4;&#x6F0F;&#x4E86;&#x5BC6;&#x94A5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; acme.sh &#x5C06;&#x539F;&#x8BC1;&#x4E66;&#x540A;&#x9500;&#xFF0C;&#x518D;&#x751F;&#x6210;&#x65B0;&#x7684;&#x8BC1;&#x4E66;&#xFF0C;&#x540A;&#x9500;&#x65B9;&#x6CD5;&#x8BF7;&#x81EA;&#x884C;&#x53C2;&#x8003; acme.sh &#x7684;&#x624B;&#x518C;</strong></p>
+<h2 id="&#x914D;&#x7F6E;-v2ray"><a name="&#x914D;&#x7F6E;-v2ray" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;-v2ray"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x914D;&#x7F6E; V2Ray</h2>
+<h3 id="&#x670D;&#x52A1;&#x5668;"><a name="&#x670D;&#x52A1;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x670D;&#x52A1;&#x5668;</h3>
+<pre class="language-"><code class="lang-javascript"><span class="token punctuation">{</span>
+  <span class="token string">&quot;inbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">443</span><span class="token punctuation">,</span> <span class="token comment">// &#x5EFA;&#x8BAE;&#x4F7F;&#x7528; 443 &#x7AEF;&#x53E3;</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vmess&quot;</span><span class="token punctuation">,</span>    
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;clients&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23ad6b10-8d1a-40f7-8ad0-e3e35cd38297&quot;</span><span class="token punctuation">,</span>  
+            <span class="token string">&quot;alterId&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;streamSettings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;network&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tcp&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;security&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tls&quot;</span><span class="token punctuation">,</span> <span class="token comment">// security &#x8981;&#x8BBE;&#x7F6E;&#x4E3A; tls &#x624D;&#x4F1A;&#x542F;&#x7528; TLS</span>
+        <span class="token string">&quot;tlsSettings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;certificates&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token string">&quot;certificateFile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/etc/v2ray/v2ray.crt&quot;</span><span class="token punctuation">,</span> <span class="token comment">// &#x8BC1;&#x4E66;&#x6587;&#x4EF6;</span>
+              <span class="token string">&quot;keyFile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/etc/v2ray/v2ray.key&quot;</span> <span class="token comment">// &#x5BC6;&#x94A5;&#x6587;&#x4EF6;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;outbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;freedom&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x5BA2;&#x6237;&#x7AEF;"><a name="&#x5BA2;&#x6237;&#x7AEF;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x5BA2;&#x6237;&#x7AEF;</h3>
+<pre class="language-"><code class="lang-javascript"><span class="token punctuation">{</span>
+  <span class="token string">&quot;inbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">1080</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;socks&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sniffing&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;enabled&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;destOverride&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;tls&quot;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;auth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;noauth&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;outbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vmess&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;vnext&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token string">&quot;address&quot;</span><span class="token operator">:</span> <span class="token string">&quot;mydomain.me&quot;</span><span class="token punctuation">,</span> <span class="token comment">// tls &#x9700;&#x8981;&#x57DF;&#x540D;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5E94;&#x8BE5;&#x586B;&#x81EA;&#x5DF1;&#x7684;&#x57DF;&#x540D;</span>
+            <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">443</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;users&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23ad6b10-8d1a-40f7-8ad0-e3e35cd38297&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;alterId&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;streamSettings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;network&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tcp&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;security&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tls&quot;</span> <span class="token comment">// &#x5BA2;&#x6237;&#x7AEF;&#x7684; security &#x4E5F;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A; tls</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x9A8C;&#x8BC1;"><a name="&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x9A8C;&#x8BC1;</h2>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x6309;&#x7167;&#x4EE5;&#x4E0A;&#x6B65;&#x9AA4;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#xFF0C;V2Ray &#x5BA2;&#x6237;&#x7AEF;&#x80FD;&#x591F;&#x6B63;&#x5E38;&#x8054;&#x7F51;&#x8BF4;&#x660E; TLS &#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x542F;&#x7528;&#x3002;&#x4F46;&#x8981;&#x662F;&#x6709;&#x4E2A;&#x53EF;&#x9760;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x6B63;&#x5E38;&#x5F00;&#x542F; TLS &#x65E0;&#x7591;&#x66F4;&#x4EE4;&#x4EBA;&#x653E;&#x5FC3;&#x3002;
+&#x9A8C;&#x8BC1;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x6211;&#x4EC5;&#x4ECB;&#x7ECD;&#x4E00;&#x79CD;&#x5C0F;&#x767D;&#x5316;&#x4E00;&#x70B9;&#x7684;&#xFF0C;&#x4FBF;&#x662F; <a href="https://www.ssllabs.com/ssltest/index.html" target="_blank">Qualys SSL Labs&apos;s SSL Server Test</a>&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x4F7F;&#x7528; Qualys SSL Labs&apos;s SSL Server Test &#x8981;&#x6C42;&#x4F7F;&#x7528; 443 &#x7AEF;&#x53E3;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4F60;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x7684; inbound.port &#x5E94;&#x5F53;&#x662F; 443</strong></p>
+<p>&#x6253;&#x5F00; <a href="https://www.ssllabs.com/ssltest/index.html" target="_blank">Qualys SSL Labs&apos;s SSL Server Test</a>&#xFF0C;&#x5728;
+Hostname &#x4E2D;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x70B9;&#x63D0;&#x4EA4;&#xFF0C;&#x8FC7;&#x4E00;&#x4F1A;&#x7ED3;&#x679C;&#x5C31;&#x51FA;&#x6765;&#x4E86;&#x3002;
+<img src="../resource/images/tls_test1.png" alt=""></p>
+<p><img src="../resource/images/tls_test2.png" alt="">
+&#x8FD9;&#x662F;&#x5BF9;&#x4E8E;&#x4F60;&#x7684; TLS/SSL &#x7684;&#x4E00;&#x4E2A;&#x603B;&#x4F53;&#x8BC4;&#x5206;&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x8BC4;&#x5206;&#x4E3A; A&#xFF0C;&#x770B;&#x6765;&#x8FD8;&#x4E0D;&#x9519;&#x3002;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x754C;&#x9762;&#x7B97;&#x662F;&#x6210;&#x529F;&#x4E86;&#x3002;</p>
+<p><img src="../resource/images/tls_test3.png" alt="">
+&#x8FD9;&#x662F;&#x5173;&#x4E8E;&#x8BC1;&#x4E66;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x4ECE;&#x56FE;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x6211;&#x7684;&#x8FD9;&#x4E2A;&#x8BC1;&#x4E66;&#x6709;&#x6548;&#x671F;&#x662F;&#x4ECE; 2016 &#x5E74; 12 &#x6708; 27 &#x53F7;&#x5230; 2017 &#x5E74;&#x7684; 3 &#x6708; 27 &#x53F7;&#xFF0C;&#x5BC6;&#x94A5;&#x662F; 256 &#x4F4D;&#x7684; ECC&#xFF0C;&#x8BC1;&#x4E66;&#x7B7E;&#x53D1;&#x673A;&#x6784;&#x662F; Let&apos;s Encrypt&#xFF0C;&#x91CD;&#x8981;&#x7684;&#x662F;&#x6700;&#x540E;&#x4E00;&#x884C;&#xFF0C;<code>Trusted</code> &#x4E3A; <code>Yes</code>&#xFF0C;&#x8868;&#x660E;&#x6211;&#x8FD9;&#x4E2A;&#x8BC1;&#x4E66;&#x53EF;&#x4FE1;&#x3002;</p>
+<h2 id="&#x6E29;&#x99A8;&#x63D0;&#x9192;"><a name="&#x6E29;&#x99A8;&#x63D0;&#x9192;" class="anchor-navigation-ex-anchor" href="#&#x6E29;&#x99A8;&#x63D0;&#x9192;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x6E29;&#x99A8;&#x63D0;&#x9192;</h2>
+<p><strong>V2Ray &#x7684; TLS &#x4E0D;&#x662F;&#x4F2A;&#x88C5;&#x6216;&#x6DF7;&#x6DC6;&#xFF0C;&#x8FD9;&#x662F;&#x5B8C;&#x6574;&#x3001;&#x771F;&#x6B63;&#x7684; TLS&#x3002;&#x56E0;&#x6B64;&#x624D;&#x9700;&#x8981;&#x57DF;&#x540D;&#x548C;&#x8BC1;&#x4E66;&#x3002;&#x540E;&#x6587;&#x63D0;&#x5230;&#x7684; WS(WebSocket) &#x4E5F;&#x4E0D;&#x662F;&#x4F2A;&#x88C5;&#x3002;</strong></p>
+<hr>
+<h2 id="&#x66F4;&#x65B0;&#x5386;&#x53F2;"><a name="&#x66F4;&#x65B0;&#x5386;&#x53F2;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x66F4;&#x65B0;&#x5386;&#x53F2;</h2>
+<ul>
+<li>2017-08-06 &#x52A0;&#x70B9;&#x63D0;&#x9192;</li>
+<li>2017-12-31 &#x4FEE;&#x6B63;&#x6587;&#x5B57;&#x9519;&#x8BEF;</li>
+<li>2018-04-05 Update</li>
+<li>2018-11-17 V4.0+ &#x914D;&#x7F6E;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="httpfake.html" class="navigation navigation-prev " aria-label="Previous page: HTTP 伪装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="websocket.html" class="navigation navigation-next " aria-label="Next page: WebSocket">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TLS","level":"1.4.7","depth":2,"next":{"title":"WebSocket","level":"1.4.8","depth":2,"path":"advanced/websocket.md","ref":"advanced/websocket.md","articles":[]},"previous":{"title":"HTTP 伪装","level":"1.4.6","depth":2,"path":"advanced/httpfake.md","ref":"advanced/httpfake.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","codeblock-filename","editlink","anchors","anchor-navigation-ex","theme-comscore","code","codeblock-filename","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"editlink":{"label":"修订","multilingual":false,"base":"https://github.com/toutyrater/v2ray-guide/edit/master"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"codeblock-filename":{},"theme-comscore":{},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"V2Ray 配置指南|V2Ray 白话文教程","links":{"sidebar":{"My GitHub":"https://github.com/ToutyRater"}},"gitbook":"*","description":"关于 V2Ray 配置的详细教程"},"file":{"path":"advanced/tls.md","mtime":"2020-03-15T02:46:22.393Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-15T02:47:12.878Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

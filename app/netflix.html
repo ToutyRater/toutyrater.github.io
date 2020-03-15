@@ -1,0 +1,1104 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>利用 V2Ray 看 Netflix · V2Ray 配置指南|V2Ray 白话文教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="docker-deploy-v2ray.html" />
+    
+    
+    <link rel="prev" href="balance.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/ToutyRater" target="_blank" class="custom-link">My GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prep/">
+            
+                <a href="../prep/">
+            
+                    
+                    开篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../prep/start.html">
+            
+                <a href="../prep/start.html">
+            
+                    
+                    开始之前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../prep/install.html">
+            
+                <a href="../prep/install.html">
+            
+                    
+                    安装 V2Ray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../prep/json.html">
+            
+                <a href="../prep/json.html">
+            
+                    
+                    配置格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    基本篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic/vmess.html">
+            
+                <a href="../basic/vmess.html">
+            
+                    
+                    VMess 协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic/Shadowsocks.html">
+            
+                <a href="../basic/Shadowsocks.html">
+            
+                    
+                    Shadowsocks 协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic/log.html">
+            
+                <a href="../basic/log.html">
+            
+                    
+                    日志文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic/routing/">
+            
+                <a href="../basic/routing/">
+            
+                    
+                    路由功能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../basic/routing/cndirect.html">
+            
+                <a href="../basic/routing/cndirect.html">
+            
+                    
+                    国内直连
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../basic/routing/adblock.html">
+            
+                <a href="../basic/routing/adblock.html">
+            
+                    
+                    广告过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../basic/routing/notice.html">
+            
+                <a href="../basic/routing/notice.html">
+            
+                    
+                    注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic/sumup.html">
+            
+                <a href="../basic/sumup.html">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../advanced/">
+            
+                <a href="../advanced/">
+            
+                    
+                    高级篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../advanced/mux.html">
+            
+                <a href="../advanced/mux.html">
+            
+                    
+                    Mux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../advanced/mkcp.html">
+            
+                <a href="../advanced/mkcp.html">
+            
+                    
+                    mKCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../advanced/dynamicport.html">
+            
+                <a href="../advanced/dynamicport.html">
+            
+                    
+                    动态端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../advanced/outboundproxy.html">
+            
+                <a href="../advanced/outboundproxy.html">
+            
+                    
+                    代理转发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../advanced/vps_relay.html">
+            
+                <a href="../advanced/vps_relay.html">
+            
+                    
+                    国内中转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../advanced/httpfake.html">
+            
+                <a href="../advanced/httpfake.html">
+            
+                    
+                    HTTP 伪装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../advanced/tls.html">
+            
+                <a href="../advanced/tls.html">
+            
+                    
+                    TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../advanced/websocket.html">
+            
+                <a href="../advanced/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../advanced/wss_and_web.html">
+            
+                <a href="../advanced/wss_and_web.html">
+            
+                    
+                    WebSocket+TLS+Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../advanced/h2.html">
+            
+                <a href="../advanced/h2.html">
+            
+                    
+                    HTTP/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../advanced/cdn.html">
+            
+                <a href="../advanced/cdn.html">
+            
+                    
+                    CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../advanced/not_recommend.html">
+            
+                <a href="../advanced/not_recommend.html">
+            
+                    
+                    不建议的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    应用篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="transparent_proxy.html">
+            
+                <a href="transparent_proxy.html">
+            
+                    
+                    透明代理(REDIRECT)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="tproxy.html">
+            
+                <a href="tproxy.html">
+            
+                    
+                    透明代理(TPROXY)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="reverse.html">
+            
+                <a href="reverse.html">
+            
+                    
+                    反向代理/内网穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="reverse2.html">
+            
+                <a href="reverse2.html">
+            
+                    
+                    反向代理/内网穿透2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    内置 DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="balance.html">
+            
+                <a href="balance.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.7" data-path="netflix.html">
+            
+                <a href="netflix.html">
+            
+                    
+                    利用 V2Ray 看 Netflix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="docker-deploy-v2ray.html">
+            
+                <a href="docker-deploy-v2ray.html">
+            
+                    
+                    Docker 部署 V2Ray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="benchmark.html">
+            
+                <a href="benchmark.html">
+            
+                    
+                    不权威性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    内存优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../routing/">
+            
+                <a href="../routing/">
+            
+                    
+                    路由篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../routing/sitedata.html">
+            
+                <a href="../routing/sitedata.html">
+            
+                    
+                    域名文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../routing/configurate_rules.html">
+            
+                <a href="../routing/configurate_rules.html">
+            
+                    
+                    路由规则设定方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../routing/bittorrent.html">
+            
+                <a href="../routing/bittorrent.html">
+            
+                    
+                    禁止 BT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../routing/balance2.html">
+            
+                <a href="../routing/balance2.html">
+            
+                    
+                    负载均衡 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >利用 V2Ray 看 Netflix</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;-v2ray-&#x770B;-netflix"><b>1. </b>&#x5229;&#x7528; V2Ray &#x770B; Netflix</a></li><ul><li><span class="title-icon "></span><a href="#&#x8BF4;&#x660E;"><b>1.1. </b>&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;"><b>1.2. </b>&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6307;&#x5B9A;&#x51FA;&#x7AD9;-ip"><b>1.2.1. </b>&#x6307;&#x5B9A;&#x51FA;&#x7AD9; IP</a></li><li><span class="title-icon "></span><a href="#&#x4E2D;&#x8F6C;"><b>1.2.2. </b>&#x4E2D;&#x8F6C;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7406;&#x8F6C;&#x53D1;"><b>1.2.3. </b>&#x4EE3;&#x7406;&#x8F6C;&#x53D1;</a></li><li><span class="title-icon "></span><a href="#dns"><b>1.2.4. </b>DNS</a></li></ul><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7ED3;"><b>1.3. </b>&#x5C0F;&#x7ED3;</a></li></ul></ul></div><a href="#&#x5229;&#x7528;-v2ray-&#x770B;-netflix" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5229;&#x7528;-v2ray-&#x770B;-netflix"><a name="&#x5229;&#x7528;-v2ray-&#x770B;-netflix" class="anchor-navigation-ex-anchor" href="#&#x5229;&#x7528;-v2ray-&#x770B;-netflix"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5229;&#x7528; V2Ray &#x770B; Netflix</h1>
+<h2 id="&#x8BF4;&#x660E;"><a name="&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x8BF4;&#x660E;</h2>
+<p>&#x6211;&#x53D1;&#x73B0;&#xFF0C;&#x5728;&#x4E2D;&#x56FD;&#x7684;&#x8BB8;&#x591A;&#x559C;&#x6B22;&#x770B;&#x7F8E;&#x5267;&#x5E76;&#x5177;&#x5907;&#x79D1;&#x5B66;&#x4E0A;&#x7F51;&#x80FD;&#x529B;&#x7684;&#x7F51;&#x53CB;&#x6BD4;&#x8F83;&#x559C;&#x6B22;&#x4F7F;&#x7528; Netflix&#x3002;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x7248;&#x6743;&#x95EE;&#x9898;&#xFF0C;Netflix &#x662F;&#x6CA1;&#x6709;&#x4E2D;&#x533A;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684; VPS IP &#x88AB; Netflix &#x52A0;&#x5165;&#x4E86;&#x9ED1;&#x540D;&#x5355;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x4E00;&#x822C;&#x7684;&#x7FFB;&#x5899;&#x624B;&#x6BB5;&#x4E5F;&#x65E0;&#x6CD5;&#x89E3;&#x51B3;&#x89C2;&#x770B; Netflix &#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x672C;&#x6587;&#x4F1A;&#x63D0;&#x4F9B;&#x591A;&#x79CD;&#x5229;&#x7528; V2Ray &#x89C2;&#x770B; Netflix &#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4F46;&#x662F;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;<strong>&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x8BF4;&#x7528;&#x4E86;&#x6211;&#x8BF4;&#x7684;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x5C31;&#x80FD;&#x591F;&#x770B; Netflix</strong>&#xFF0C;&#x4E00;&#x4E2A;&#x88AB;&#x52A0;&#x5165;&#x9ED1;&#x540D;&#x5355;&#x7684; IP &#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x4E5F;&#x770B;&#x4E0D;&#x4E86;&#x7684;&#xFF0C;&#x8FD9;&#x662F; Netflix &#x7684;&#x539F;&#x56E0;&#xFF0C;&#x4E0E;&#x5899;&#x65E0;&#x5173;&#xFF0C;&#x4E5F;&#x4E0E; VPS &#x4F9B;&#x5E94;&#x5546;&#x65E0;&#x5173;&#x3002;&#x6211;&#x5E0C;&#x671B;&#x5927;&#x5BB6;&#x80FD;&#x591F;&#x660E;&#x786E;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E0A;&#x6765;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x770B;&#xFF0C;&#x5BF9;&#x7167;&#x7740;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E00;&#x987F;&#x731B;&#x64CD;&#x4F5C;&#xFF0C;&#x6700;&#x540E;&#x53D1;&#x73B0;&#x4E0D;&#x884C;&#x5C31;&#x5230;&#x7FA4;&#x91CC;&#x9A82;&#x9A82;&#x54A7;&#x54A7;&#xFF0C;&#x8BE5;&#x63D0;&#x793A;&#x7684;&#x90FD;&#x63D0;&#x793A;&#x4E86;&#xFF0C;&#x81EA;&#x5DF1;&#x4E0D;&#x770B;&#x602A;&#x6211;&#x54AF;&#xFF1F;</p>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86;&#x4E3A;&#x4EC0;&#x4E48;&#x770B;&#x4E0D;&#x4E86; Netflix &#x7684;&#x539F;&#x56E0;&#xFF0C;&#x90A3;&#x4E48;&#x8981;&#x80FD;&#x591F;&#x770B; Netflix &#x7684;&#x65B9;&#x6CD5;&#x5F52;&#x6839;&#x7ED3;&#x5E95;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x627E;&#x5230;&#x6CA1;&#x6709;&#x88AB;&#x52A0;&#x5165;&#x9ED1;&#x540D;&#x5355;&#x7684; IP&#x3002;&#x90A3;&#x4E48;&#x600E;&#x4E48;&#x627E;&#x5230;&#x8FD9;&#x4E9B;&#x6F0F;&#x7F51;&#x7684; IP&#xFF1F;&#x5C31;&#x4E2A;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x662F;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A; VPS &#x4E70;&#x7136;&#x540E;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x8BD5;&#xFF0C;&#x4E8C;&#x662F;&#x4E70;&#x673A;&#x573A;&#x5546;&#x5BB6;&#x63D0;&#x4F9B;&#x7684;&#x73B0;&#x6210;&#x7684;&#x53EF;&#x4EE5;&#x770B; Netflix &#x7684;&#x4EE3;&#x7406;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x81EA;&#x5DF1;&#x627E;&#x7684; IP &#x8BF4;&#x4E0D;&#x5B9A;&#x662F;&#x54EA;&#x4E2A;&#x5C0F;&#x56FD;&#x5BB6;&#x7684;&#xFF0C;&#x76F4;&#x8FDE;&#x901F;&#x5EA6;&#x582A;&#x6BD4;&#x5F53;&#x5E74;&#x7684; ADSL&#xFF1B;&#x4E70;&#x673A;&#x573A;&#x7684;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x6D41;&#x91CF;&#x95EE;&#x9898;&#x7B49;&#x3002;</p>
+<p>&#x5570;&#x55E6;&#x5927;&#x534A;&#x5929;&#xFF0C;&#x8BF4;&#x767D;&#x4E86;&#x672C;&#x6587;&#x662F;&#x89E3;&#x51B3;&#x89C2;&#x770B; Netflix &#x548C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x7FFB;&#x5899;&#x4E4B;&#x95F4;&#x7684;&#x901F;&#x5EA6;&#x53CA;&#x6D41;&#x91CF;&#x95EE;&#x9898;&#x7684;&#x51B2;&#x7A81;&#x3002;&#x5728;&#x8FD9;&#x4E4B;&#x524D;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x4F60;&#x6709;&#x80FD;&#x591F;&#x89C2;&#x770B; Netflix &#x7684; IP&#xFF0C;&#x5728;&#x8BF4;&#x660E;&#x5404;&#x4E2A;&#x65B9;&#x6CD5;&#x65F6;&#x5C06;&#x4ECB;&#x7ECD;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;</p>
+<h2 id="&#x65B9;&#x6CD5;"><a name="&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x65B9;&#x6CD5;</h2>
+<h3 id="&#x6307;&#x5B9A;&#x51FA;&#x7AD9;-ip"><a name="&#x6307;&#x5B9A;&#x51FA;&#x7AD9;-ip" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x5B9A;&#x51FA;&#x7AD9;-ip"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x6307;&#x5B9A;&#x51FA;&#x7AD9; IP</h3>
+<p>&#x6709;&#x4E00;&#x4E9B; VPS &#x4F1A;&#x63D0;&#x4F9B; IPv6 &#x7684;&#x5730;&#x5740;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x63D0;&#x4F9B;&#x7684; IPv6 &#x53EF;&#x4EE5;&#x770B; Netflix&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6307;&#x5B9A; Netflix &#x7684;&#x6D41;&#x91CF;&#x4F7F;&#x7528; IPv6,&#x5176;&#x4F59;&#x7684;&#x4F7F;&#x7528; IPv4&#x3002;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token punctuation">{</span>
+  <span class="token string">&quot;inbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">16823</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vmess&quot;</span><span class="token punctuation">,</span>    
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;clients&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;b831381d-6324-4d53-ad4f-8cda48b30811&quot;</span><span class="token punctuation">,</span>  
+            <span class="token string">&quot;alterId&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sniffing&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;enabled&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E00;&#x5B9A;&#x8981;&#x5F00;&#x542F; sniffing&#xFF0C;V2Ray &#x624D;&#x80FD;&#x8BC6;&#x522B; Netflix &#x7684;&#x6D41;&#x91CF;</span>
+        <span class="token string">&quot;destOverride&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;tls&quot;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;outbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;tag&quot;</span><span class="token operator">:</span><span class="token string">&quot;IP4_out&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;freedom&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;tag&quot;</span><span class="token operator">:</span><span class="token string">&quot;IP6_out&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;freedom&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;domainStrategy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;UseIPv6&quot;</span> <span class="token comment">// &#x6307;&#x5B9A;&#x4F7F;&#x7528; IPv6</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;routing&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;field&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;outboundTag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;IP6_out&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;domain&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;geosite:netflix&quot;</span><span class="token punctuation">]</span> <span class="token comment">// netflix &#x8D70; IPv6</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;field&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;outboundTag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;IP4_out&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;network&quot;</span><span class="token operator">:</span> <span class="token string">&quot;udp,tcp&quot;</span><span class="token comment">// &#x5176;&#x4F59;&#x8D70; IPv4</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x4E2D;&#x8F6C;"><a name="&#x4E2D;&#x8F6C;" class="anchor-navigation-ex-anchor" href="#&#x4E2D;&#x8F6C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. &#x4E2D;&#x8F6C;</h3>
+<p>&#x4E2D;&#x8F6C;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x901F;&#x5EA6;&#x6162;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#x4F60;&#x6709; VPS1 &#x548C; VPS2 &#x8FD9;&#x4E24;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53D1;&#x73B0; VPS1 &#x53EF;&#x4EE5;&#x770B; Netflix&#xFF0C;&#x4F46;&#x662F;&#x901F;&#x5EA6;&#x6162;&#xFF0C;VPS2 &#x901F;&#x5EA6;&#x4E0D;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x770B;&#x4E0D;&#x4E86; Netflix&#x3002;&#x518D;&#x52A0;&#x4E0A;&#x901A;&#x5E38;&#x6765;&#x8BF4;&#x56FD;&#x5916; VPS &#x4E4B;&#x95F4;&#x7684;&#x901F;&#x5EA6;&#x4E0D;&#x4F1A;&#x592A;&#x5DEE;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; VPS2 &#x505A;&#x4E2D;&#x8F6C;&#xFF0C;&#x5C5E;&#x4E8E; Netflix &#x7684;&#x6D41;&#x91CF;&#x5C31;&#x8F6C;&#x53D1;&#x5230; VPS1&#xFF0C;&#x5176;&#x4ED6;&#x6D41;&#x91CF;&#x5C31;&#x76F4;&#x8FDE;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5728;<a href="https://toutyrater.github.io/advanced/vps_relay.html" target="_blank">&#x56FD;&#x5185;&#x4E2D;&#x8F6C;</a>&#x4ECB;&#x7ECD;&#x8FC7;&#x3002;&#x4EE5;&#x4E0B;&#x662F; VPS2 &#x7684;&#x914D;&#x7F6E;&#x793A;&#x4F8B;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5; VPS2 &#x5373;&#x53EF;&#x3002;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token punctuation">{</span>
+  <span class="token string">&quot;inbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">16823</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vmess&quot;</span><span class="token punctuation">,</span>    
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;clients&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;b831381d-6324-4d53-ad4f-8cda48b30811&quot;</span><span class="token punctuation">,</span>  
+            <span class="token string">&quot;alterId&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sniffing&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;enabled&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E00;&#x5B9A;&#x8981;&#x5F00;&#x542F; sniffing&#xFF0C;V2Ray &#x624D;&#x80FD;&#x8BC6;&#x522B; Netflix &#x7684;&#x6D41;&#x91CF;</span>
+        <span class="token string">&quot;destOverride&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;tls&quot;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;outbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;freedom&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token comment">// VPS1 &#x7684;&#x914D;&#x7F6E;</span>
+      <span class="token string">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VPS1&quot;</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vmess&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;vnext&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          <span class="token string">&quot;address&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.2.3.4&quot;</span><span class="token punctuation">,</span> 
+          <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">10086</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;users&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23ad6b10-8d1a-40f7-8ad0-e3e35cd38297&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;security&quot;</span><span class="token operator">:</span> <span class="token string">&quot;auto&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;alterId&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;routing&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;field&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;outboundTag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VPS1&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;domain&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;geosite:netflix&quot;</span><span class="token punctuation">]</span> <span class="token comment">// netflix &#x8D70; VPS1</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x4EE3;&#x7406;&#x8F6C;&#x53D1;"><a name="&#x4EE3;&#x7406;&#x8F6C;&#x53D1;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7406;&#x8F6C;&#x53D1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. &#x4EE3;&#x7406;&#x8F6C;&#x53D1;</h3>
+<p><a href="https://toutyrater.github.io/advanced/outboundproxy.html" target="_blank">&#x4EE3;&#x7406;&#x8F6C;&#x53D1;</a>&#x4E5F;&#x5728;&#x524D;&#x6587;&#x4E2D;&#x4ECB;&#x7ECD;&#x8FC7;&#xFF0C;&#x5B83;&#x4E0E;&#x4E2D;&#x8F6C;&#x7684;&#x65B9;&#x6CD5;&#x5176;&#x5B9E;&#x662F;&#x5DEE;&#x522B;&#x4E0D;&#x5927;&#x7684;&#x3002;&#x7167;&#x642C;&#x4E0A;&#x6587;&#x63D0;&#x5230;&#x7684;&#x4E2D;&#x8F6C;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x5982;&#x6709; VPS1 &#x548C; VPS2 &#x8FD9;&#x4E24;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53D1;&#x73B0; VPS1 &#x53EF;&#x4EE5;&#x770B; Netflix&#xFF0C;&#x4F46;&#x662F;&#x901F;&#x5EA6;&#x6162;&#xFF0C;VPS2 &#x901F;&#x5EA6;&#x4E0D;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x770B;&#x4E0D;&#x4E86; Netflix&#x3002;&#x5982;&#x679C;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x4E2A;&#x60C5;&#x51B5;&#xFF0C;VPS2 &#x662F;&#x8D2D;&#x4E70;&#x7684;&#x4EE3;&#x7406;&#xFF08;&#x6BD4;&#x5982;&#x673A;&#x573A;&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x6CA1;&#x6CD5;&#x4FEE;&#x6539; VPS2 &#x7684;&#x914D;&#x7F6E;&#x5B9E;&#x73B0;&#x4E2D;&#x8F6C;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709; VPS2 &#x7684;&#x76F4;&#x63A5;&#x63A7;&#x5236;&#x6743;&#x9650;&#xFF0C;&#x9876;&#x591A;&#x80FD;&#x4FEE;&#x6539;&#x7AEF;&#x53E3;&#x3001;UUID &#x8FD9;&#x4E9B;&#x6709;&#x9650;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x65E2;&#x7136;&#x6539;&#x4E0D;&#x4E86;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x90A3;&#x6211;&#x5C31;&#x6539;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4E0A;&#x5229;&#x7528;&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4EE5; VPS2 &#x4E3A;&#x8DF3;&#x677F;&#xFF0C;&#x5C06; Netflix &#x7684;&#x6D41;&#x91CF;&#x8F6C;&#x53D1;&#x81F3; VPS1&#x3002;&#x5177;&#x4F53;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#x3002;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token punctuation">{</span>
+  <span class="token string">&quot;inbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">1080</span><span class="token punctuation">,</span> 
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;socks&quot;</span><span class="token punctuation">,</span> 
+      <span class="token string">&quot;sniffing&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;enabled&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E00;&#x5B9A;&#x8981;&#x5F00;&#x542F; sniffing&#xFF0C;V2Ray &#x624D;&#x80FD;&#x8BC6;&#x522B; Netflix &#x7684;&#x6D41;&#x91CF;</span>
+        <span class="token string">&quot;destOverride&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;tls&quot;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;auth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;noauth&quot;</span>  
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;outbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token comment">// VPS1 &#x7684;&#x914D;&#x7F6E;</span>
+      <span class="token string">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VPS1&quot;</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vmess&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;vnext&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          <span class="token string">&quot;address&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.2.3.4&quot;</span><span class="token punctuation">,</span> 
+          <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">10086</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;users&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23ad6b10-8d1a-40f7-8ad0-e3e35cd38297&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;security&quot;</span><span class="token operator">:</span> <span class="token string">&quot;auto&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;alterId&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;proxySettings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VPS2&quot;</span>  <span class="token comment">// VPS2 &#x7684; tag&#xFF0C;&#x8868;&#x793A; VPS1 &#x7684;&#x6D41;&#x91CF;&#x7531; VPS2 &#x8F6C;&#x53D1;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token comment">// VPS2 &#x7684;&#x914D;&#x7F6E;</span>
+      <span class="token string">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VPS2&quot;</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vmess&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;vnext&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          <span class="token string">&quot;address&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.2.3.5&quot;</span><span class="token punctuation">,</span> 
+          <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">16823</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;users&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;b831381d-6324-4d53-ad4f-8cda48b30811&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;security&quot;</span><span class="token operator">:</span> <span class="token string">&quot;auto&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;alterId&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;direct&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;freedom&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;routing&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;field&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;outboundTag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;direct&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;domain&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;geosite:cn&quot;</span><span class="token punctuation">]</span> <span class="token comment">// &#x56FD;&#x5185;&#x76F4;&#x8FDE;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>    
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;field&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;outboundTag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VPS1&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;domain&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;geosite:netflix&quot;</span><span class="token punctuation">]</span> <span class="token comment">// netflix &#x8D70; VPS1</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;field&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;outboundTag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VPS2&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;network&quot;</span><span class="token operator">:</span> <span class="token string">&quot;udp,tcp&quot;</span> <span class="token comment">// &#x5176;&#x4F59;&#x8D70; VPS2</span>
+      <span class="token punctuation">}</span>  
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x7684;&#x6709;&#x4E00;&#x4E2A;&#x7F3A;&#x70B9;&#xFF0C;&#x5C31;&#x662F;streamSettings&#x5C06;&#x4F1A;&#x5931;&#x6548;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x80FD;&#x7528; TCP &#x7684;&#x4F20;&#x8F93;&#x5C42;&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x5F00;&#x542F; TLS&#x3002;&#x4E0D;&#x8FC7;&#x8FD9;&#x5176;&#x5B9E;&#x662F;&#x6709;&#x529E;&#x6CD5;&#x89E3;&#x51B3;&#x7684;&#xFF0C;&#x5229;&#x7528; V2Ray &#x81EA;&#x5E26;&#x7684; dokodemo-door &#x518D;&#x8F6C;&#x53D1;&#x4E00;&#x6B21;&#x5C31;&#x884C;&#x4E86;&#xFF0C;&#x91CD;&#x70B9;&#x6211;&#x5DF2;&#x7ECF;&#x63D0;&#x793A;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x9700;&#x8981;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x53BB;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#x3002;</p>
+<h3 id="dns"><a name="dns" class="anchor-navigation-ex-anchor" href="#dns"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. DNS</h3>
+<p>&#x7F51;&#x4E0A;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x6240;&#x8C13; DNS &#x89E3;&#x9501;&#x7684;&#x529E;&#x6CD5;&#x770B; Netflix&#xFF0C;&#x8BF4;&#x5F97;&#x597D;&#x6D41;&#x5F0A;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x540E;&#x6765;&#x6211;&#x770B;&#x4E86;&#x4E00;&#x4E0B;&#x5176;&#x5B9E;&#x5C31;&#x662F; SNI Proxy &#x7684;&#x9A6C;&#x7532;&#xFF0C;&#x518D;&#x8BF4;&#x7B80;&#x5355;&#x70B9;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x52AB;&#x6301; DNS &#x5C06; Netflix &#x89E3;&#x6790;&#x5230;&#x53EF;&#x4EE5;&#x770B; Netflix &#x7684;&#x670D;&#x52A1;&#x5668; IP &#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x5DF2;&#x7ECF;&#x642D;&#x5EFA;&#x4E86; SNI &#x4EE3;&#x7406;&#xFF0C;&#x4E5F;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x4E0A;&#x9762;&#x8BF4;&#x7684; DNS &#x89E3;&#x9501;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x7F51;&#x4E0A;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x751F;&#x610F;&#x4EBA;&#x642D;&#x5EFA;&#x4E86;&#x8FD9;&#x7C7B; DNS &#x89E3;&#x9501;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; DNS &#x670D;&#x52A1;&#x5668; IP&#xFF0C;&#x628A; DNS &#x8BBE;&#x7F6E;&#x7684;&#x6539;&#x6210;&#x4ED6;&#x63D0;&#x4F9B;&#x7684; IP &#x5C31;&#x53EF;&#x4EE5;&#x770B; Netflix &#x4E86;&#x3002;&#x8FD9;&#x6837;&#x7684; DNS &#x89E3;&#x9501;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E24;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x4E00;&#x662F;&#x9690;&#x79C1;&#x95EE;&#x9898;&#xFF0C;&#x7528;&#x4EBA;&#x5BB6;&#x63D0;&#x4F9B;&#x7684; DNS&#xFF0C;&#x4F60;&#x4E0A;&#x4EC0;&#x4E48;&#x7F51;&#x7AD9;&#x522B;&#x4EBA;&#x90FD;&#x77E5;&#x9053;&#xFF0C;&#x4E8C;&#x662F;&#x7A33;&#x5B9A;&#x95EE;&#x9898;&#xFF0C;&#x54EA;&#x4E00;&#x5929;&#x8FD9;&#x4E2A; DNS &#x5D29;&#x4E86;&#xFF0C;&#x4E0D;&#x4EC5;&#x770B;&#x4E0D;&#x4E86; Netflix&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x4E0A;&#x7F51;&#x6D3B;&#x52A8;&#x90FD;&#x4F1A;&#x53D7;&#x5F71;&#x54CD;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528; V2Ray &#x8FDB;&#x884C; DNS &#x5206;&#x6D41;&#xFF0C;netflix &#x7684;&#x5730;&#x5740;&#x4EA4;&#x7ED9;&#x5546;&#x5BB6;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x5668;&#x89E3;&#x6790;&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x4EA4;&#x7ED9;&#x7A33;&#x5B9A;&#x53EF;&#x9760;&#x7ECF;&#x5F97;&#x8D77;&#x65F6;&#x95F4;&#x8003;&#x9A8C;&#x7684;DNS&#x670D;&#x52A1;&#x5668;(&#x5982; Google &#x5BB6;&#x7684;)&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x793A;&#x4F8B;&#x914D;&#x7F6E;&#x3002;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token punctuation">{</span>
+  <span class="token string">&quot;inbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">16823</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vmess&quot;</span><span class="token punctuation">,</span>    
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;clients&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;b831381d-6324-4d53-ad4f-8cda48b30811&quot;</span><span class="token punctuation">,</span>  
+            <span class="token string">&quot;alterId&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sniffing&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;enabled&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E00;&#x5B9A;&#x8981;&#x5F00;&#x542F; sniffing&#xFF0C;V2Ray &#x624D;&#x80FD;&#x8BC6;&#x522B; Netflix &#x7684;&#x6D41;&#x91CF;</span>
+        <span class="token string">&quot;destOverride&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;tls&quot;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;outbounds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">&quot;protocol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;freedom&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;domainStrategy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;UseIP&quot;</span> <span class="token comment">// &#x5FC5;&#x987B;&#x8BBE;&#x5B9A; domainStrategy &#x4E3A; UseIP &#x4EE5;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684;DNS</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;dns&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;servers&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">&quot;8.8.8.8&quot;</span><span class="token punctuation">,</span> 
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;address&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.1.2.2&quot;</span><span class="token punctuation">,</span> <span class="token comment">// &#x8D2D;&#x4E70;&#x7684; DNS &#x89E3;&#x9501;&#x63D0;&#x4F9B;&#x7684; IP</span>
+        <span class="token string">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;domains&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token string">&quot;geosite:netflix&quot;</span> 
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A; DNS &#x7684;&#x65B9;&#x6CD5;&#x6211;&#x5E76;&#x6CA1;&#x6709;&#x7528;&#x8FC7;&#xFF0C;&#x8FD9;&#x4E2A;&#x53EA;&#x662F;&#x6211;&#x6839;&#x636E;&#x8D44;&#x6599;&#x800C;&#x4E3B;&#x89C2;&#x611F;&#x89C9;&#x53EF;&#x884C;&#x3002;</p>
+<h2 id="&#x5C0F;&#x7ED3;"><a name="&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5C0F;&#x7ED3;</h2>
+<ol>
+<li>&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x901A;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x662F;&#x4EC5;&#x9488;&#x5BF9; Netflix&#xFF0C;HBO &#x4E5F;&#x53EF;&#x4EE5;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x4E00;&#x4E9B;&#x6BD4;&#x8F83;&#x5C0F;&#x4F17;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x53EA;&#x63D0; Netflix &#x662F;&#x56E0;&#x4E3A;&#x5927;&#x4F19;&#x5BF9; Netflix &#x7684;&#x9700;&#x6C42;&#x6BD4;&#x8F83;&#x5927;&#xFF1B;</li>
+<li>&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#x4E0D;&#x9650;&#x4E8E; VMess &#x534F;&#x8BAE;&#xFF0C;&#x793A;&#x4F8B;&#x4F7F;&#x7528; VMess &#x53EA;&#x662F;&#x65B9;&#x4FBF;&#xFF0C;&#x4F60;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x7528; V2Ray &#x642D;&#x914D;&#x5176;&#x4ED6;&#x4EE3;&#x7406;&#x5DE5;&#x5177;&#x4F7F;&#x7528;&#xFF1B;</li>
+<li>&#x5176;&#x5B9E;&#x5199;&#x672C;&#x6587;&#x611F;&#x89C9;&#x6CA1;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF0C;&#x53EA;&#x662F;&#x79C0;&#x4E00;&#x4E0B; V2Ray &#x800C;&#x5DF2;&#xFF0C;&#x4E0D;&#x8FC7;&#x5BF9;&#x4E8E;&#x6709;&#x9700;&#x8981;&#x7684;&#x670B;&#x53CB;&#x6765;&#x8BF4;&#x8FD8;&#x662F;&#x633A;&#x6709;&#x7528;&#x7684;&#xFF1B;</li>
+<li>&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x662F;&#x914D;&#x7F6E;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#xFF0C;&#x9274;&#x4E8E;&#x76EE;&#x524D; V2Ray &#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B9E;&#x73B0;&#x7A0B;&#x5EA6;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5199;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x624D;&#x884C;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x7528; iOS &#x7684; Kitsunebi&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x628A;&#x6709; proxySettings &#x7684;&#x51FA;&#x7AD9;&#x534F;&#x8BAE;&#x653E;&#x5728; outbounds &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#xFF0C;&#x522B;&#x95EE;&#x4E3A;&#x4EC0;&#x4E48;&#xFF0C;&#x6211;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x3002;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="balance.html" class="navigation navigation-prev " aria-label="Previous page: 负载均衡">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="docker-deploy-v2ray.html" class="navigation navigation-next " aria-label="Next page: Docker 部署 V2Ray">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"利用 V2Ray 看 Netflix","level":"1.5.7","depth":2,"next":{"title":"Docker 部署 V2Ray","level":"1.5.8","depth":2,"path":"app/docker-deploy-v2ray.md","ref":"app/docker-deploy-v2ray.md","articles":[]},"previous":{"title":"负载均衡","level":"1.5.6","depth":2,"path":"app/balance.md","ref":"app/balance.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","codeblock-filename","editlink","anchors","anchor-navigation-ex","theme-comscore","code","codeblock-filename","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"editlink":{"label":"修订","multilingual":false,"base":"https://github.com/toutyrater/v2ray-guide/edit/master"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"codeblock-filename":{},"theme-comscore":{},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"V2Ray 配置指南|V2Ray 白话文教程","links":{"sidebar":{"My GitHub":"https://github.com/ToutyRater"}},"gitbook":"*","description":"关于 V2Ray 配置的详细教程"},"file":{"path":"app/netflix.md","mtime":"2020-03-15T02:46:22.393Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-15T02:47:12.878Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
